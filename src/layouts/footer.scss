@@ -1,0 +1,143 @@
+@import "../assets/styles/variables";
+
+
+.Footer {
+    margin-top: 100px;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    border-top: 2px solid $border-color-3;
+    padding-inline: 7%;
+    padding-block: 10px;
+    padding-top: 30px;
+
+    .react-link {
+        text-decoration: none;
+        color: black;
+    }
+
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-row {
+        display: flex;
+    }
+
+    .footer-logo {
+        .logo {
+            font-size: 1.5em;
+
+            span {
+                font-weight: bolder;
+                color: $primary-color;
+            }
+        }
+
+        p {
+            margin-top: 20px;
+            color: $text-color;
+            font-size: 17px !important;
+            font-weight: 400 !important;
+        }
+
+        @include lg {
+            display: none;
+        }
+    }
+
+    .footer-contacts {
+
+        div {
+            color: $text-color;
+        }
+
+        .footer-row {
+            margin-top: 20px;
+
+            input {
+                height: 35px;
+                accent-color: $primary-color;
+                border: 1px solid $border-color-2;
+                border-radius: 5px;
+                border-bottom-right-radius: 0px;
+                border-top-right-radius: 0px;
+            }
+
+            button {
+                border: 0;
+                width: 40px;
+                background-color: $primary-color;
+                color: white;
+                font-size: 20px;
+            }
+        }
+
+        .social {
+            i {
+                font-size: 25px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .footer-links {
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .footer-column {
+            p {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                height: 30px;
+                color: $text-color-2;
+                padding-bottom: 25px;
+                cursor:default;
+
+                &:hover{
+                    border-bottom: 2px solid $primary-color;
+                }
+            }
+        }
+    }
+
+    .footer-categories {
+        @include breakpoint(600px) {
+            display: none;
+        }
+    }
+
+    .last-row {
+        margin-top: 50px;
+        font-size: 15px;
+        color: $text-color;
+        font-weight: 400;
+
+        .copyright {
+            margin-right: auto;
+
+            @include breakpoint(600px) {
+                margin-right: 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        p {
+            margin-right: 30px;
+
+            @include breakpoint(600px) {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,313 @@
+@import "../../../../assets/styles/variables";
+
+.SellerDetails {
+    width: 100%;
+    height: 100vh;
+    margin-top: 80px;
+    background-color: $sub-backgorund-color-2;
+    overflow-y: auto;
+
+    .seller-details-wrapper {
+        width: 100%;
+        height: fit-content;
+        padding-inline: 100px;
+        display: flex;
+
+        @include xl {
+            padding-inline: 5%;
+        }
+
+        @include breakpoint(1060px) {
+            flex-direction: column;
+        }
+    }
+
+    .profile {
+        display: flex;
+        margin-top: 20px;
+        width: 300px;
+        height: fit-content;
+        padding: 10px;
+        padding-inline: 30px;
+        border-radius: 5px;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+        @include breakpoint(1060px) {
+            width: 100%;
+            flex-direction: row;
+        }
+
+
+        .profile-img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: flex;
+            justify-content: center;
+
+            @include breakpoint(1060px) {
+                width: 210px;
+                height: 210px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @include md {
+                width: 100px;
+                height: 100px;
+            }
+
+            img {
+                width: 210px;
+                height: 210px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                margin-bottom: 10px;
+
+                @include md {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+        }
+
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include breakpoint(1060px) {
+                width: 100%;
+            }
+
+            @include md {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .name {
+                font-size: 25px;
+                text-align: center;
+
+                @include md {
+                    width: 200px;
+                    margin-left: 20px;
+                }
+            }
+
+            .job {
+                color: rgb(67, 66, 66);
+                text-align: center;
+            }
+
+            .row {
+                display: flex;
+                width: 100%;
+                height: 50px;
+                align-items: center;
+                justify-content: center;
+
+                @include md {
+                    border-left: 1px solid $border-color-2;
+                    justify-content: start;
+                    padding: 10px;
+                    margin-left: 10px;
+                }
+
+                .rating-num {
+                    margin-right: 10px;
+                    font-size: 40px;
+
+                }
+
+                .rating-sub {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: left;
+
+                    .rating-star {}
+
+                    .reviews {}
+                }
+            }
+
+        }
+
+        .container2 {
+            margin-left: 0px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            @include md {
+                display: none;
+            }
+
+            ul {
+                margin-top: 20px;
+                margin-right: 10px;
+                list-style: none;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    display: flex;
+                    span {
+                        &:nth-child(1) {
+                            display: flex;
+                            width: 50%;
+                            font-weight: 600;
+                        }
+
+                        &:nth-child(2) {
+                            width: 50%;
+                            color: rgb(49, 49, 49);
+                        }
+
+                    }
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+            min-height: 30px;
+            margin-top: 20px;
+            border: 0;
+            font-size: 15px;
+            color: white;
+            background-color: $primary-color;
+            border-radius: 5px;
+            cursor: pointer;
+
+            @include breakpoint(1060px) {
+                display: none;
+            }
+        }
+
+        .seller-about-text {
+            font-size: 20px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            padding-top: 10px;
+            border-top: 1px solid $border-color-3;
+
+            @include breakpoint(1060px) {
+                display: none;
+            }
+        }
+
+        .seller-about {
+            text-align: justify;
+
+            @include breakpoint(1060px) {
+                display: none;
+            }
+        }
+    }
+
+    .for-small {
+        display: none;
+        margin-top: 20px;
+        height: fit-content;
+        padding: 10px;
+        padding-inline: 30px;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+        button {
+            width: 100%;
+            min-height: 30px;
+            margin-top: 20px;
+            border: 0;
+            font-size: 15px;
+            color: white;
+            background-color: $primary-color;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .seller-about-text {
+            font-size: 20px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            padding-top: 10px;
+        }
+
+        .seller-about {
+            text-align: justify;
+        }
+
+        @include breakpoint(1060px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    .main-container {
+        margin-top: 20px;
+        width: calc(100% - 320px);
+        min-width: 935px;
+        height: fit-content;
+        min-height: calc(100% - 10px);
+        margin-left: 20px;
+        position: relative;
+        padding-bottom: 10px;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+        @include breakpoint(1060px) {
+            width: 100%;
+            margin-left: 0px;
+        }
+
+        .seller-container-nav {
+            height: 60px;
+            padding: 10px;
+            z-index: 10;
+            background-color: white;
+            border-radius: 5px;
+
+            ul {
+                list-style: none;
+                display: flex;
+
+                .active-seller-nav {
+                    height: 40px;
+                    margin-right: 40px;
+                    padding-block: 7px;
+                    border-radius: 1px;
+                    border-bottom: 3px solid $primary-color;
+                    text-decoration: none;
+                    color: black;
+                }
+
+                .seller-nav {
+                    text-decoration: none;
+                    color: black;
+                    margin-right: 40px;
+                    padding-block: 7px;
+                    border-radius: 1px;
+                }
+            }
+        }
+
+        .seller-nav-container {
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            // height: fit-content;
+        }
+    }
+
+}
