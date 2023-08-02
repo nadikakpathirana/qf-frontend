@@ -59,7 +59,7 @@ export default function AppHeader(props) {
             onKeyUp={(event) => {
               if (event.key == "Enter") {
                 if (searchKey.trim() != "") {
-                  navigate(`/services/search/${searchKey}`, { searchKey });
+                  navigate(`/fns/search/${searchKey}`, { searchKey });
                 } else {
                   setSearchKey(undefined);
                   navigate("/services");
@@ -76,10 +76,10 @@ export default function AppHeader(props) {
               className="fa-solid fa-magnifying-glass"
               onClick={() => {
                 if (searchKey.trim() != "") {
-                  navigate(`/services/search/${searchKey}`, { searchKey });
+                  navigate(`/fns/search/${searchKey}`, { searchKey });
                 } else {
                   setSearchKey(undefined);
-                  navigate("/services");
+                  navigate("/fns");
                 }
               }}
             ></i>

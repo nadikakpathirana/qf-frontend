@@ -62,10 +62,10 @@ export default function Services(props) {
         });
     } else if (searchCategory == "") {
       await api
-        .get(`/services`)
+        .get(`/fns`)
         .then((res) => {
           console.log(res);
-          setServicesList(servicesList.concat(res.data.services));
+          setServicesList(servicesList.concat(res.data.fns));
         })
         .catch((e) => {
           console.log(e);
@@ -73,9 +73,9 @@ export default function Services(props) {
     } else {
       // setSearchCategory("");
       await api
-        .get(`/services/category/${searchCategory}`)
+        .get(`/fns/category/${searchCategory}`)
         .then((res) => {
-          setServicesList(servicesList.concat(res.data.services));
+          setServicesList(servicesList.concat(res.data.fns));
         })
         .catch((e) => {
           console.log(e);
@@ -122,7 +122,7 @@ export default function Services(props) {
                   <ServiceCard
                     name={item.name}
                     profile_img={item.proPic}
-                    service_img={`http://${API_IP_2}/api/${item.serviceImg}`}
+                    service_img={`http://${API_IP_2}/api/${item.fnImg}`}
                     title={item.title}
                     location={item.location}
                     id={item._id}

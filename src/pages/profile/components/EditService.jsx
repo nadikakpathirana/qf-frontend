@@ -371,7 +371,7 @@ function EditService(props) {
                     className="delete-service button"
                     onClick={() => {
                       api
-                        .delete(`services/${id}`)
+                        .delete(`fns/${id}`)
                         .then((res) => {
                           navigate("/profile/services");
                         })

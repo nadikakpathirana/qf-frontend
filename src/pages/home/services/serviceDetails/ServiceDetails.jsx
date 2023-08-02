@@ -113,7 +113,7 @@ export default function ServiceDetails(props) {
                 <span>Down Payment</span>
                 <div className="p-details">
                   {serviceDetails.fn &&
-                    serviceDetails.fn.rateOfPayment}
+                    serviceDetails.fn.price / 2 + "LKR"}
                 </div>
               </div>
               <div className="p-container">
